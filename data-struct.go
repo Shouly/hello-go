@@ -58,5 +58,27 @@ func main() {
 	// map
 	fmt.Println("/////")
 
+	var m map[string]int
 
+	m = make(map[string]int)
+
+	m["x"] = 1
+
+	fmt.Println(m)
+	fmt.Println(m["y"])
+	fmt.Println(len(m))
+
+	n := map[string]int{"x": 1, "y": 2}
+
+	fmt.Println(n)
+
+	mn, ok := n["mn"]
+
+	if !ok {
+		fmt.Println(mn, ok)
+	}
+
+	for k, v := range n {
+		fmt.Println(k, v)
+	}
 }
